@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة مصر الرقمية - بوابة التحول الرقمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="egypt.css">
+        <link rel="shortcut icon" href="download.jpeg" type="image/x-icon">
+</head>
+<body class="language-ar">
+    <div class="toggle-container">
+        <div class="toggle-btn" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="toggle-btn" id="language-toggle">
+            <i class="fas fa-language"></i>
+        </div>
+    </div>
+
+    <!-- Egyptian Flag Stripes -->
+    <div class="flag-stripe stripe-red"></div>
+    <div class="flag-stripe stripe-white"></div>
+    <div class="egyptian-pattern"></div>
+    <div class="flag-stripe stripe-black"></div>
+
+    <!-- Header -->
+    <header class="hero-pattern text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
+            <div class="flex items-center">
+                <div class="bg-white p-2 rounded-lg mr-3 shadow-lg">
+                    <i class="eagle-icon fas fa-crown"></i>
+                </div>
+                <span class="text-2xl font-bold" data-ar="مصر الرقمية" data-en="Digital Egypt">مصر الرقمية</span>
+            </div>
+            <div class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#home" class="hover:text-red-200 transition-colors" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="#services" class="hover:text-red-200 transition-colors" data-ar="الخدمات" data-en="Services">الخدمات</a>
+                <a href="#education" class="hover:text-red-200 transition-colors" data-ar="التعليم" data-en="Education">التعليم</a>
+                <a href="#achievements" class="hover:text-red-200 transition-colors" data-ar="الإنجازات" data-en="Achievements">الإنجازات</a>
+                <a href="#timeline" class="hover:text-red-200 transition-colors" data-ar="المسيرة" data-en="Journey">المسيرة</a>
+            </div>
+            <button class="md:hidden bg-white bg-opacity-20 p-2 rounded-lg">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div class="container mx-auto px-4 py-20 md:py-28 flex flex-col items-center text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-float" data-ar="رحلة التحول الرقمي في مصر" data-en="Digital Transformation Journey in Egypt">رحلة التحول الرقمي في مصر</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl leading-relaxed" data-ar="نحو مجتمع رقمي متكامل يواكب رؤية مصر 2030 للتنمية المستدامة والتحول الرقمي" data-en="Towards an integrated digital society that keeps pace with Egypt's 2030 vision for sustainable development and digital transformation">نحو مجتمع رقمي متكامل يواكب رؤية مصر 2030 للتنمية المستدامة والتحول الرقمي</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="colorful-button text-white px-8 py-4 rounded-xl font-bold shadow-lg">
+                <a href="#services">    <i class="fas fa-compass ml-2"></i><span data-ar="استكشف الخدمات" data-en="Explore Services" href="#services">استكشف الخدمات</span>
+                </button> </a>
+                <!-- <button class="bg-white text-red-700 px-8 py-4 rounded-xl font-bold hover:bg-red-50 transition shadow-lg transform hover:-translate-y-1">
+                    <i class="fas fa-play-circle ml-2"></i><span data-ar="شاهد الفيديو" data-en="Watch Video">شاهد الفيديو</span>
+                </button> -->
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full flex justify-center z-10">
+            <a href="#services" class="bg-white text-red-700 p-3 rounded-full mb-6 animate-bounce">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+
+        <!-- Egyptian Pyramid -->
+        <div class="absolute bottom-10 left-10 opacity-20">
+            <div class="pyramid"></div>
+        </div>
+    </header>
+
+    <!-- Nile River -->
+    <div class="nile-river"></div>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gradient-to-r from-red-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card text-white p-6 text-center rounded-2xl">
+                    <div class="counter" data-target="127">0</div>
+                    <p class="mt-2" data-ar="خدمة رقمية" data-en="Digital Services">خدمة رقمية</p>
+                </div>
+                <div class="stat-card text-white p-6 text-center rounded-2xl">
+                    <div class="counter" data-target="86">0</div>
+                    <p class="mt-2" data-ar="منصة تعليمية" data-en="Educational Platforms">منصة تعليمية</p>
+                </div>
+                <div class="stat-card text-white p-6 text-center rounded-2xl">
+                    <div class="counter" data-target="34">0</div>
+                    <p class="mt-2" data-ar="مبادرة حكومية" data-en="Government Initiatives">مبادرة حكومية</p>
+                </div>
+                <div class="stat-card text-white p-6 text-center rounded-2xl">
+                    <div class="counter" data-target="12">0</div>
+                    <p class="mt-2" data-ar="مليون مستخدم" data-en="Million Users">مليون مستخدم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4" data-ar="الخدمات الحكومية الرقمية" data-en="Digital Government Services">الخدمات الحكومية الرقمية</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-ar="استفد من مجموعة واسعة من الخدمات الحكومية المتاحة الآن إلكترونياً" data-en="Benefit from a wide range of government services now available electronically">استفد من مجموعة واسعة من الخدمات الحكومية المتاحة الآن إلكترونياً</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front service-card p-6 rounded-2xl shadow-md border border-gray-100">
+                            <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-id-card text-red-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="البطاقة الذكية" data-en="Smart ID">البطاقة الذكية</h3>
+                            <p class="text-gray-600" data-ar="خدمة إصدار وتجديد البطاقة الشخصية الذكية إلكترونياً" data-en="Service for issuing and renewing smart ID cards electronically">خدمة إصدار وتجديد البطاقة الشخصية الذكية إلكترونياً</p>
+                            <div class="mt-4 text-red-600">
+                                <i class="fas fa-arrow-left"></i>
+                                <span class="mr-2" data-ar="اعرف المزيد" data-en="Learn More">اعرف المزيد</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back service-card bg-red-600 text-white p-6 rounded-2xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4" data-ar="مميزات البطاقة الذكية" data-en="Smart ID Features">مميزات البطاقة الذكية</h3>
+                            <ul class="list-disc pr-5 space-y-2 text-red-100">
+                                <li data-ar="أعلى معايير الأمان" data-en="Highest security standards">أعلى معايير الأمان</li>
+                                <li data-ar="إصدار في خلال 48 ساعة" data-en="Issued within 48 hours">إصدار في خلال 48 ساعة</li>
+                                <li data-ar="إمكانية الدفع الإلكتروني" data-en="Electronic payment capability">إمكانية الدفع الإلكتروني</li>
+                                <li data-ar="تخزين المعلومات الصحية" data-en="Health information storage">تخزين المعلومات الصحية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front service-card p-6 rounded-2xl shadow-md border border-gray-100">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-file-invoice text-yellow-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="الخدمات الضريبية" data-en="Tax Services">الخدمات الضريبية</h3>
+                            <p class="text-gray-600" data-ar="تقديم الإقرارات الضريبية ودفع المستحقات إلكترونياً" data-en="Submitting tax returns and paying dues electronically">تقديم الإقرارات الضريبية ودفع المستحقات إلكترونياً</p>
+                            <div class="mt-4 text-yellow-600">
+                                <i class="fas fa-arrow-left"></i>
+                                <span class="mr-2" data-ar="اعرف المزيد" data-en="Learn More">اعرف المزيد</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back service-card bg-yellow-600 text-white p-6 rounded-2xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4" data-ar="مميزات الخدمات الضريبية" data-en="Tax Services Features">مميزات الخدمات الضريبية</h3>
+                            <ul class="list-disc pr-5 space-y-2 text-yellow-100">
+                                <li data-ar="تقديم الإقرارات خلال دقائق" data-en="Submit returns within minutes">تقديم الإقرارات خلال دقائق</li>
+                                <li data-ar="دفع إلكتروني آمن" data-en="Secure electronic payment">دفع إلكتروني آمن</li>
+                                <li data-ar="متابعة حالة الطلبات" data-en="Track request status">متابعة حالة الطلبات</li>
+                                <li data-ar="استشارات ضريبية إلكترونية" data-en="Electronic tax consultations">استشارات ضريبية إلكترونية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front service-card p-6 rounded-2xl shadow-md border border-gray-100">
+                            <div class="w-16 h-16 bg-black rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-home text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="خدمات التخطيط العمراني" data-en="Urban Planning Services">خدمات التخطيط العمراني</h3>
+                            <p class="text-gray-600" data-ar="الحصول على تراخيص البناء والتقديم على مشروعات التطوير" data-en="Obtaining building permits and applying for development projects">الحصول على تراخيص البناء والتقديم على مشروعات التطوير</p>
+                            <div class="mt-4 text-black">
+                                <i class="fas fa-arrow-left"></i>
+                                <span class="mr-2" data-ar="اعرف المزيد" data-en="Learn More">اعرف المزيد</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back service-card bg-black text-white p-6 rounded-2xl shadow-md">
+                            <h3 class="text-xl font-bold mb-4" data-ar="مميزات خدمات التخطيط العمراني" data-en="Urban Planning Features">مميزات خدمات التخطيط العمراني</h3>
+                            <ul class="list-disc pr-5 space-y-2 text-gray-300">
+                                <li data-ar="تقديم الطلبات إلكترونياً" data-en="Electronic application submission">تقديم الطلبات إلكترونياً</li>
+                                <li data-ar="متابعة حالة الطلبات" data-en="Track application status">متابعة حالة الطلبات</li>
+                                <li data-ar="دفع الرسوم إلكترونياً" data-en="Electronic fee payment">دفع الرسوم إلكترونياً</li>
+                                <li data-ar="استلام الموافقات رقمياً" data-en="Digital approval reception">استلام الموافقات رقمياً</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="text-center mt-12">
+                <button class="colorful-button text-white px-8 py-3 rounded-xl font-bold shadow-lg">
+                    <i class="fas fa-list ml-2"></i><span data-ar="اكتشف جميع الخدمات" data-en="Discover All Services">اكتشف جميع الخدمات</span>
+                </button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Nile River -->
+    <div class="nile-river"></div>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gradient-to-b from-white to-red-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4" data-ar="التحول الرقمي في التعليم" data-en="Digital Transformation in Education">التحول الرقمي في التعليم</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-ar="منصات تعليمية متطورة تواكب أحدث التقنيات العالمية" data-en="Advanced educational platforms that keep pace with the latest global technologies">منصات تعليمية متطورة تواكب أحدث التقنيات العالمية</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <div class="service-card p-6 rounded-2xl shadow-md mb-6 fade-in">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-xl mr-4">
+                                <i class="fas fa-book-open text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="بنك المعرفة المصري" data-en="Egyptian Knowledge Bank">بنك المعرفة المصري</h3>
+                                <p class="text-gray-600 mb-4" data-ar="أحد أكبر المشروعات القومية التي تتيح الوصول إلى المحتوى العلمي والمعرفي للباحثين والطلاب" data-en="One of the largest national projects that provides access to scientific and knowledge content for researchers and students">أحد أكبر المشروعات القومية التي تتيح الوصول إلى المحتوى العلمي والمعرفي للباحثين والطلاب</p>
+                                <div class="flex items-center text-red-600 font-medium">
+                                    <span data-ar="استكشف الموقع" data-en="Explore Website">استكشف الموقع</span>
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card p-6 rounded-2xl shadow-md mb-6 fade-in">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-3 rounded-xl mr-4">
+                                <i class="fas fa-laptop text-yellow-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="منصة التعليم الإلكتروني" data-en="E-Learning Platform">منصة التعليم الإلكتروني</h3>
+                                <p class="text-gray-600 mb-4" data-ar="منصة متكاملة تتيح للطلاب الوصول إلى الدروس التفاعلية والاختبارات الإلكترونية" data-en="An integrated platform that allows students to access interactive lessons and electronic tests">منصة متكاملة تتيح للطلاب الوصول إلى الدروس التفاعلية والاختبارات الإلكترونية</p>
+                                <div class="flex items-center text-yellow-600 font-medium">
+                                    <span data-ar="استكشف الموقع" data-en="Explore Website">استكشف الموقع</span>
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card p-6 rounded-2xl shadow-md fade-in">
+                        <div class="flex items-start">
+                            <div class="bg-black p-3 rounded-xl mr-4">
+                                <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="الاختبارات الإلكترونية" data-en="Electronic Exams">الاختبارات الإلكترونية</h3>
+                                <p class="text-gray-600 mb-4" data-ar="نظام متكامل لتقديم الاختبارات إلكترونياً مع تأمين كامل ومنع الغش" data-en="An integrated system for taking exams electronically with full security and cheating prevention">نظام متكامل لتقديم الاختبارات إلكترونياً مع تأمين كامل ومنع الغش</p>
+                                <div class="flex items-center text-black font-medium">
+                                    <span data-ar="استكشف الموقع" data-en="Explore Website">استكشف الموقع</span>
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                      <diV class="rounded-xl"> <img src="images.png"></diV> 
+                        <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-xl shadow-lg border border-red-600">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-red-600">+2.5M</div>
+                                <div class="text-gray-600" data-ar="مستخدم للمنصات التعليمية" data-en="Educational Platform Users">مستخدم للمنصات التعليمية</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nile River -->
+    <div class="nile-river"></div>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-16 bg-gradient-to-b from-red-50 to-yellow-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4" data-ar="مسيرة التحول الرقمي" data-en="Digital Transformation Journey">مسيرة التحول الرقمي</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-ar="رحلة التطور الرقمي في مصر خلال السنوات الماضية" data-en="The journey of digital evolution in Egypt over the past years">رحلة التطور الرقمي في مصر خلال السنوات الماضية</p>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline-item mb-12 fade-in">
+                    <div class="service-card p-6 rounded-2xl shadow-md border border-red-200">
+                        <div class="text-red-600 font-bold text-lg mb-2">2023</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="إطلاق منصة مصر الرقمية الموحدة" data-en="Launch of Unified Digital Egypt Platform">إطلاق منصة مصر الرقمية الموحدة</h3>
+                        <p class="text-yellow-600" data-ar="دمج أكثر من 100 خدمة حكومية في منصة واحدة سهلة الاستخدام" data-en="Integration of over 100 government services into one easy-to-use platform">دمج أكثر من 100 خدمة حكومية في منصة واحدة سهلة الاستخدام</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item mb-12 fade-in">
+                    <div class="service-card p-6 rounded-2xl shadow-md border border-yellow-200">
+                        <div class="text-yellow-600 font-bold text-lg mb-2">2022</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="تعميم البطاقة الذكية" data-en="Generalization of Smart ID">تعميم البطاقة الذكية</h3>
+                        <p class="text-yellow-600" data-ar="استبدال البطاقة الشخصية بالبطاقة الذكية في جميع المحافظات" data-en="Replacement of personal ID with smart ID across all governorates">استبدال البطاقة الشخصية بالبطاقة الذكية في جميع المحافظات</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item mb-12 fade-in">
+                    <div class="service-card p-6 rounded-2xl shadow-md border border-black">
+                        <div class="text-black font-bold text-lg mb-2">2021</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="التعليم الإلكتروني" data-en="E-Learning">التعليم الإلكتروني</h3>
+                        <p class="text-yellow-600" data-ar="تحويل 80% من المناهج التعليمية إلى منصات رقمية تفاعلية" data-en="Conversion of 80% of educational curricula to interactive digital platforms">تحويل 80% من المناهج التعليمية إلى منصات رقمية تفاعلية</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="service-card p-6 rounded-2xl shadow-md border border-red-200">
+                        <div class="text-red-600 font-bold text-lg mb-2">2020</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2" data-ar="بداية المشروع القومي للتحول الرقمي" data-en="Start of National Digital Transformation Project">بداية المشروع القومي للتحول الرقمي</h3>
+                        <p class="text-yellow-600" data-ar="وضع الاستراتيجية الوطنية للتحول الرقمي وربط المرافق الحكومية" data-en="Establishment of the national digital transformation strategy and connecting government facilities">وضع الاستراتيجية الوطنية للتحول الرقمي وربط المرافق الحكومية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nile River -->
+    <div class="nile-river"></div>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 bg-gradient-to-b from-yellow-50 to-red-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4" data-ar="إنجازات الدولة نحو التحول الرقمي" data-en="National Achievements in Digital Transformation">إنجازات الدولة نحو التحول الرقمي</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-ar="إنجازات ملموسة في رحلة التحول الرقمي بمختلف القطاعات" data-en="Tangible achievements in the digital transformation journey across various sectors">إنجازات ملموسة في رحلة التحول الرقمي بمختلف القطاعات</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="service-card p-6 rounded-2xl shadow-md fade-in border border-red-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 p-3 rounded-xl mr-4">
+                            <i class="fas fa-network-wired text-red-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800" data-ar="البنية التحتية الرقمية" data-en="Digital Infrastructure">البنية التحتية الرقمية</h3>
+                            <p class="text-gray-600" data-ar="تطوير البنية التحتية للاتصالات وشبكات الألياف البصرية في جميع أنحاء الجمهورية" data-en="Development of communication infrastructure and fiber optic networks across the republic">تطوير البنية التحتية للاتصالات وشبكات الألياف البصرية في جميع أنحاء الجمهورية</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-gray-600" data-ar="التقدم المحقق" data-en="Progress Achieved">التقدم المحقق</span>
+                            <span class="text-sm font-medium text-red-600">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value w-[85%]"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card p-6 rounded-2xl shadow-md fade-in border border-yellow-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-xl mr-4">
+                            <i class="fas fa-shield-alt text-yellow-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800" data-ar="الأمن السيبراني" data-en="Cybersecurity">الأمن السيبراني</h3>
+                            <p class="text-gray-600" data-ar="تعزيز أمن المعلومات وحماية البيانات الشخصية للمواطنين بأعلى معايير العالمية" data-en="Enhancing information security and protecting citizens' personal data with the highest global standards">تعزيز أمن المعلومات وحماية البيانات الشخصية للمواطنين بأعلى معايير العالمية</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-gray-600" data-ar="التقدم المحقق" data-en="Progress Achieved">التقدم المحقق</span>
+                            <span class="text-sm font-medium text-yellow-600">78%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value w-[78%]"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card p-6 rounded-2xl shadow-md fade-in border border-black">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-black p-3 rounded-xl mr-4">
+                            <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800" data-ar="الحكومة المتنقلة" data-en="Mobile Government">الحكومة المتنقلة</h3>
+                            <p class="text-gray-600" data-ar="تطوير تطبيقات الهواتف الذكية لتقديم الخدمات الحكومية في أي وقت ومن أي مكان" data-en="Developing smartphone applications to provide government services anytime, anywhere">تطوير تطبيقات الهواتف الذكية لتقديم الخدمات الحكومية في أي وقت ومن أي مكان</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-gray-600" data-ar="التقدم المحقق" data-en="Progress Achieved">التقدم المحقق</span>
+                            <span class="text-sm font-medium text-black">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value w-[92%]"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card p-6 rounded-2xl shadow-md fade-in border border-red-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 p-3 rounded-xl mr-4">
+                            <i class="fas fa-database text-red-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800" data-ar="مراكز البيانات الوطنية" data-en="National Data Centers">مراكز البيانات الوطنية</h3>
+                            <p class="text-gray-600" data-ar="إنشاء مراكز بيانات وطنية متطورة لتخزين ومعالجة البيانات الحكومية بأعلى معايير الأمان" data-en="Establishing advanced national data centers for storing and processing government data with the highest security standards">إنشاء مراكز بيانات وطنية متطورة لتخزين ومعالجة البيانات الحكومية بأعلى معايير الأمان</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-gray-600" data-ar="التقدم المحقق" data-en="Progress Achieved">التقدم المحقق</span>
+                            <span class="text-sm font-medium text-red-600">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value w-[65%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-red-600 text-white p-8 rounded-2xl text-center shadow-lg fade-in">
+                <h3 class="text-2xl font-bold mb-4" data-ar="مصر تتحول رقمياً" data-en="Egypt is Going Digital">مصر تتحول رقمياً</h3>
+                <p class="mb-6 max-w-2xl mx-auto" data-ar="انضم إلى رحلة التحول الرقمي في مصر وكن جزءاً من مستقبل رقمي متطور يواكب أحدث التقنيات العالمية" data-en="Join Egypt's digital transformation journey and be part of an advanced digital future that keeps pace with the latest global technologies">انضم إلى رحلة التحول الرقمي في مصر وكن جزءاً من مستقبل رقمي متطور يواكب أحدث التقنيات العالمية</p>
+                <button class="bg-white text-red-600 px-8 py-3 rounded-xl font-bold shadow-lg transform hover:-translate-y-1 transition">
+                   <a href="https://digital.gov.eg/x"> <i class="fas fa-globe-pointer ml-2"></i><span data-ar=" موقع مصر الرقمية  " data-en="Digital Egypt's Website" href="https://digital.gov.eg/x">موقع مصر الرقمية </span></a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-ar="مصر الرقمية" data-en="Digital Egypt">مصر الرقمية</h3>
+                    <p class="text-gray-300 mb-4" data-ar="نحو تحول رقمي متكامل يخدم جميع قطاعات المجتمع المصري" data-en="Towards an integrated digital transformation that serves all sectors of Egyptian society">نحو تحول رقمي متكامل يخدم جميع قطاعات المجتمع المصري</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="https://www.facebook.com/egypt.moe" class="bg-blue-600 p-2 rounded-lg hover:bg-red-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- <a href="#" class="bg-red-600 p-2 rounded-lg hover:bg-red-700 transition">
+                            <i class="fab fa-x"></i>
+                        </a> -->   
+
+
+                        <a href="https://www.youtube.com/@MoEEgyptEduStream" class="bg-red-600 p-2 rounded-lg hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition" data-ar="التعليم" data-en="Education">التعليم</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition" data-ar="إنجازات الدولة" data-en="Achievements">إنجازات الدولة</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div>
+                    <h3 class="text-xl font-bold mb-4" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h3>
+                    <p class="text-gray-300 mb-2">
+                        <i class="fas fa-envelope ml-2"></i>
+                        Mohamed.2407653@emp.moe.edu.eg
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-map-marker-alt ml-2"></i>
+                        <span data-ar="إدارة تنمية مادة الكمبيوتر التعليمي" data-en="Computer Education Development Department">إدارة تنمية مادة الكمبيوتر التعليمي</span>
+                    </p>
+                </div>
+            </div> -->
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 <span data-ar="مسابقة مصر الرقمية" data-en="Digital Egypt Competition">مسابقة مصر الرقمية</span>. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="egypt.js">
+       
+    </script>
+</body>
+</html>

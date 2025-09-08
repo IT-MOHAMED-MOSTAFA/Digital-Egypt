@@ -1,0 +1,404 @@
+ :root {
+            --egypt-red: #ce1126;
+            --egypt-white: #ffffff;
+            --egypt-black: #000000;
+            --egypt-gold: #c09300;
+            --text: #1f2937;
+            --bg: #f9fafb;
+            --card-bg: #ffffff;
+            --header-bg: #ce1126;
+            --footer-bg: #000000;
+        }
+
+        .dark-mode {
+            --egypt-red: #e31b31;
+            --egypt-white: #f3f4f6;
+            --egypt-black: #111827;
+            --egypt-gold: #d4af37;
+            --text: #f3f4f6;
+            --bg: #111827;
+            --card-bg: #1f2937;
+            --header-bg: #e31b31;
+            --footer-bg: #030712;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(120deg, var(--header-bg) 0%, #a50c1d 100%);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            background-color: var(--card-bg);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--egypt-red);
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--egypt-red) 0%, #a50c1d 100%);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-right: 30px;
+            border-right: 2px solid var(--egypt-red);
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -7px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--egypt-red);
+        }
+
+        .flip-card {
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .progress-value {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--egypt-red) 0%, var(--egypt-gold) 100%);
+            transition: width 1s ease-in-out;
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--egypt-red) 0%, var(--egypt-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .egypt-text {
+            background: linear-gradient(to right, var(--egypt-red), var(--egypt-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .colorful-button {
+            background: linear-gradient(135deg, var(--egypt-red) 0%, var(--egypt-gold) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .colorful-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .pyramid {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(60deg) rotateZ(-45deg);
+            animation: rotate 20s infinite linear;
+        }
+
+        .pyramid div {
+            position: absolute;
+            border-style: solid;
+            border-width: 100px 0 100px 173px;
+            border-color: transparent transparent transparent var(--egypt-gold);
+            opacity: 0.8;
+        }
+
+        .pyramid div:nth-child(1) {
+            transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+            border-color: transparent transparent transparent var(--egypt-gold);
+        }
+
+        .pyramid div:nth-child(2) {
+            transform: rotateY(0deg) translateZ(100px) translateX(-100px);
+            border-color: transparent transparent transparent #a98300;
+        }
+
+        .pyramid div:nth-child(3) {
+            transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+            border-color: transparent transparent transparent #e0b420;
+        }
+
+        .pyramid div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(100px) translateX(-100px);
+            border-color: transparent transparent transparent #d4af37;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotateX(60deg) rotateZ(0); }
+            100% { transform: rotateX(60deg) rotateZ(360deg); }
+        }
+
+        .nile-river {
+            height: 8px;
+            background: linear-gradient(90deg, var(--egypt-red), var(--egypt-white), var(--egypt-black), var(--egypt-gold));
+            border-radius: 4px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nile-river::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            animation: nile-flow 3s infinite linear;
+        }
+
+        @keyframes nile-flow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .toggle-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: var(--card-bg);
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: var(--egypt-red);
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .language-ar {
+            direction: rtl;
+        }
+
+        .language-en {
+            direction: ltr;
+        }
+
+        .hidden-language {
+            display: none;
+        }
+
+        .flag-stripe {
+            height: 8px;
+            width: 100%;
+        }
+
+        .stripe-red {
+            background-color: var(--egypt-red);
+        }
+
+        .stripe-white {
+            background-color: var(--egypt-white);
+        }
+
+        .stripe-black {
+            background-color: var(--egypt-black);
+        }
+
+        .egyptian-pattern {
+            background: repeating-linear-gradient(
+                45deg,
+                var(--egypt-gold),
+                var(--egypt-gold) 10px,
+                var(--egypt-black) 10px,
+                var(--egypt-black) 20px
+            );
+            height: 8px;
+            width: 100%;
+        }
+
+        .eagle-icon {
+            color: var(--egypt-gold);
+            font-size: 2rem;
+        }
+        img{
+            border-radius: 8px;
+        }
+
+        /* Add this to your egypt.css file */
+
+:root {
+  --text-primary: #2d3748; /* gray-800 */
+  --text-secondary: #4a5568; /* gray-700 */
+  --text-tertiary: #718096; /* gray-600 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --accent-primary: #e53e3e; /* red-600 */
+  --accent-secondary: #dd6b20; /* yellow-600 */
+}
+
+[data-theme="dark"] {
+  --text-primary: #f7fafc; /* gray-100 */
+  --text-secondary: #e2e8f0; /* gray-200 */
+  --text-tertiary: #cbd5e0; /* gray-300 */
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --accent-primary: #fc8181; /* red-300 */
+  --accent-secondary: #f6ad55; /* yellow-300 */
+}
+
+/* Apply the color variables throughout your CSS */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-gray-800 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-700 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.text-white {
+  color: var(--text-primary) !important;
+}
+
+.bg-white {
+  background-color: var(--bg-primary) !important;
+}
+
+.bg-red-50, .bg-gradient-to-r.from-red-50.to-white {
+  background: linear-gradient(to right, var(--bg-secondary), var(--bg-primary)) !important;
+}
+
+.bg-gradient-to-b.from-white.to-red-50 {
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary)) !important;
+}
+
+.bg-gradient-to-b.from-yellow-50.to-red-50 {
+  background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-secondary)) !important;
+}
+
+.service-card {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.stat-card {
+  background-color: var(--accent-primary);
+}
+
+.progress-bar {
+  background-color: var(--bg-secondary);
+}
+
+.progress-value {
+  background-color: var(--accent-primary);
+}
+
+.border-gray-100 {
+  border-color: var(--bg-secondary);
+}
+
+/* Additional contrast improvements */
+[data-theme="dark"] .text-red-600,
+[data-theme="dark"] .text-yellow-600,
+[data-theme="dark"] .text-black {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .bg-red-100 {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .bg-yellow-100 {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .border-red-200,
+[data-theme="dark"] .border-yellow-200,
+[data-theme="dark"] .border-black {
+  border-color: var(--bg-secondary);
+}
